@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LiftoffRMAV.Controllers
 {
-    public class SearchController : Controller
+    public class WelcomeController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiftoffRMAV", "LiftoffRMAV\LiftoffRMAV.csproj", "{CB7A4CFF-8381-4734-8F48-7A1E9662C9BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiftoffRMAV", "LiftoffRMAV.csproj", "{6B21B3E8-B561-4314-B554-BCB54264C068}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CB7A4CFF-8381-4734-8F48-7A1E9662C9BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB7A4CFF-8381-4734-8F48-7A1E9662C9BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB7A4CFF-8381-4734-8F48-7A1E9662C9BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB7A4CFF-8381-4734-8F48-7A1E9662C9BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B21B3E8-B561-4314-B554-BCB54264C068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B21B3E8-B561-4314-B554-BCB54264C068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B21B3E8-B561-4314-B554-BCB54264C068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B21B3E8-B561-4314-B554-BCB54264C068}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1774EF0E-5EB9-4D5D-B31C-5B1760AD2B27}
+		SolutionGuid = {29263166-A46C-4550-91F6-D415FE3914F0}
 	EndGlobalSection
 EndGlobal

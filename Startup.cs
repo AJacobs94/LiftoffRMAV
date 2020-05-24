@@ -30,12 +30,13 @@ namespace LiftoffRMAV
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                    Configuration.GetConnectionString("ApplicationDbContext")));
             services.AddIdentity<RmavUser, RmavRole>()
+                .AddDefaultUI()
            .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
             services.AddControllersWithViews();
-            services.AddRazorPages();
+            services.AddRazorPages(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

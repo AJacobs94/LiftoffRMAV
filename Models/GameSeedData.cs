@@ -28,6 +28,7 @@ namespace LiftoffRMAV.Models
                         Price=9.99M
                     }
                     );
+                context.SaveChanges();
             }
         }
     }

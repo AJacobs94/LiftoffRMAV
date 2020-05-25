@@ -17,10 +17,21 @@ namespace LiftoffRMAV.Controllers
         {
             _context = context;
         }
-        // GET: /<controller>/
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Search.ToListAsync());
+            var searches = from s in _context.Search
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                searches = searches.Where(m => m.Title.Contains(searchString));
+            }
+            return View(await searches.ToListAsync());
         }
     }
+    // GET: /<controller>/
+    /* public async Task<IActionResult> Index()
+     {
+         return View(await _context.Search.ToListAsync());
+     }
+ }*/
 }

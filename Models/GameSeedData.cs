@@ -32,6 +32,90 @@ namespace LiftoffRMAV.Models
                         Title="Fallout New Vegas",
                         Genre="Action/Adventure",
                         Price=14.99M
+                    },
+                    new Search
+                    {
+                        Title="Horizon,Zero,Dawn",
+                        Genre="Action/Adventure",
+                        Price=19.99M
+                    },
+                    new Search
+                    {
+                        Title = "Far Cry",
+                        Genre = "Action/Adventure",
+                        Price = 9.99M
+                    },
+                    new Search
+                    {
+                        Title = "Ark",
+                        Genre = "Survival",
+                        Price = 19.99M
+                    },
+                    new Search
+                    {
+                        Title = "No Man's Sky",
+                        Genre = "Survival",
+                        Price = 19.99M
+                    },
+                    new Search
+                    {
+                        Title = "Battlefield",
+                        Genre = "First-Person shooter",
+                        Price = 9.99M
+                    },
+                    new Search
+                    {
+                        Title = "Overwatch",
+                        Genre = "First-Person shooter",
+                        Price = 14.99M
+                    },
+                    new Search
+                    {
+                        Title = "Halo 5",
+                        Genre = "First-Person shooter",
+                        Price = 14.99M
+                    },
+                    new Search
+                    {
+                        Title = "Rainbow Six",
+                        Genre = "First-Person shooter",
+                        Price = 9.99M
+                    },
+                    new Search
+                    {
+                        Title = "Metal Gear Solid",
+                        Genre = "Stealth",
+                        Price = 19.99M
+                    },
+                    new Search
+                    {
+                        Title = "Hitman",
+                        Genre = "Stealth",
+                        Price = 9.99M
+                    },
+                    new Search
+                    {
+                        Title = "Thief",
+                        Genre = "Stealth",
+                        Price = 9.99M
+                    },
+                    new Search
+                    {
+                        Title = "Dishonored",
+                        Genre = "Stealth",
+                        Price = 9.99M
+                    },
+                    new Search
+                    {
+                        Title = "Stardew Valley",
+                        Genre = "Life Simulation",
+                        Price = 19.99M
+                    },
+                    new Search
+                    {
+                        Title = "Sims 5",
+                        Genre = "Life Simulation",
+                        Price = 19.99M
                     }
                     );
                 context.SaveChanges();

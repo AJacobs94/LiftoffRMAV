@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LiftoffRMAV.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200524231834_AddMore")]
-    partial class AddMore
+    [Migration("20200525043939_AddData")]
+    partial class AddData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

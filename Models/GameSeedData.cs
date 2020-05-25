@@ -26,6 +26,12 @@ namespace LiftoffRMAV.Models
                         Title="Assassin's Creed",
                         Genre="Action/Adventure",
                         Price=9.99M
+                    },
+                    new Search
+                    {
+                        Title="Fallout New Vegas",
+                        Genre="Action/Adventure",
+                        Price=14.99M
                     }
                     );
                 context.SaveChanges();

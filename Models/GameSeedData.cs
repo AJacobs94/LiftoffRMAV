@@ -16,102 +16,102 @@ namespace LiftoffRMAV.Models
                 serviceProvider.GetRequiredService<
                 DbContextOptions<ApplicationDbContext>>()))
             {
-                if (context.Search.Any())
+                if (context.Games.Any())
                 {
                     return;
                 }
-                context.Search.AddRange(
-                    new Search
+                context.Games.AddRange(
+                    new Games
                     {
                         Title="Assassin's Creed",
                         Genre="Action/Adventure",
                         Price=9.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title="Fallout New Vegas",
                         Genre="Action/Adventure",
                         Price=14.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title="Horizon,Zero,Dawn",
                         Genre="Action/Adventure",
                         Price=19.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "Far Cry",
                         Genre = "Action/Adventure",
                         Price = 9.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "Ark",
                         Genre = "Survival",
                         Price = 19.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "No Man's Sky",
                         Genre = "Survival",
                         Price = 19.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "Battlefield",
                         Genre = "First-Person shooter",
                         Price = 9.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "Overwatch",
                         Genre = "First-Person shooter",
                         Price = 14.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "Halo 5",
                         Genre = "First-Person shooter",
                         Price = 14.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "Rainbow Six",
                         Genre = "First-Person shooter",
                         Price = 9.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "Metal Gear Solid",
                         Genre = "Stealth",
                         Price = 19.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "Hitman",
                         Genre = "Stealth",
                         Price = 9.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "Thief",
                         Genre = "Stealth",
                         Price = 9.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "Dishonored",
                         Genre = "Stealth",
                         Price = 9.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "Stardew Valley",
                         Genre = "Life Simulation",
                         Price = 19.99M
                     },
-                    new Search
+                    new Games
                     {
                         Title = "Sims 5",
                         Genre = "Life Simulation",

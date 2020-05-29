@@ -10,16 +10,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LiftoffRMAV.Controllers
 {
-    public class SearchController : Controller
+    public class GamesController : Controller
     {
         private readonly ApplicationDbContext _context;
-        public SearchController(ApplicationDbContext context)
+        public GamesController(ApplicationDbContext context)
         {
             _context = context;
         }
         public async Task<IActionResult> Index(string searchString)
         {
-            var searches = from s in _context.Search
+            var searches = from s in _context.Games
                            select s;
             if (!String.IsNullOrEmpty(searchString))
             {

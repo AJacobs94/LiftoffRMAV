@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LiftoffRMAV.Models
 {
-    public class Search
+    public class Games
     {
         public int ID { get; set; }
         public string Title { get; set; }

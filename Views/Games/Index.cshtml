@@ -18,6 +18,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Price)
             </th>
+            <th>
+                Add Games
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -34,7 +37,12 @@
                 <td>
                     @item.Price
                 </td>
+                <td>
+                    <input type="checkbox" id="games" name="games" />
+                    <label for="games">Add Game</label>
+                </td>
             </tr>
+
 
         }
     </tbody>

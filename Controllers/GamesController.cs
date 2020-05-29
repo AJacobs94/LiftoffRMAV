@@ -23,7 +23,7 @@ namespace LiftoffRMAV.Controllers
                            select s;
             if (!String.IsNullOrEmpty(searchString))
             {
-                searches = searches.Where(m => m.Title.Contains(searchString));
+                searches = searches.Where(m => m.Genre.Contains(searchString));
             }
             return View(await searches.ToListAsync());
         }

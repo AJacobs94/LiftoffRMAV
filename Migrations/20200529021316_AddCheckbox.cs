@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LiftoffRMAV.Migrations
 {
-    public partial class AddData : Migration
+    public partial class AddCheckbox : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -51,7 +51,7 @@ namespace LiftoffRMAV.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Search",
+                name: "Games",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
@@ -62,7 +62,7 @@ namespace LiftoffRMAV.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Search", x => x.ID);
+                    table.PrimaryKey("PK_Games", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -229,7 +229,7 @@ namespace LiftoffRMAV.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Search");
+                name: "Games");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

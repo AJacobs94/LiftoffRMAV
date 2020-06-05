@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LiftoffRMAV.Data;
+using LiftoffRMAV.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,11 +28,7 @@ namespace LiftoffRMAV.Controllers
             }
             return View(await searches.ToListAsync());
         }
-    }
-    // GET: /<controller>/
-    /* public async Task<IActionResult> Index()
-     {
-         return View(await _context.Search.ToListAsync());
-     }
- }*/
+        
+        
+        }
 }

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<LiftoffRMAV.Models.List>
+
+<h1>My Game List</h1>
+
+<table class="table">
+    @*<tr>
+        <th> @Html.DisplayNameFor(model => model.Games.Title)</th>
+        <th> @Html.DisplayNameFor(model => model.Games.Genre)</th>
+        <th> @Html.DisplayNameFor(model => model.Games.Price)</th>
+    </tr>*@
+    
+        @foreach (var list in Model)
+        {
+    <tr>
+        <td>@list.Games.Title</td>
+        <td>@list.Games.Genre</td>
+        <td>@list.Games.Price</td>
+    </tr>
+        }
+   
+</table>

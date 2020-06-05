@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-
+      
 namespace LiftoffRMAV.Models
 {
     public static class GameSeedData
@@ -17,72 +17,83 @@ namespace LiftoffRMAV.Models
                 DbContextOptions<ApplicationDbContext>>()))
             {
                 if (context.Games.Any())
-                {
+                { 
                     return;
                 }
                 context.Games.AddRange(
                     new Games
                     {
-                        Title="Assassin's Creed",
+                        
+                        Title="Assassin's Creed",   
                         Genre="Action/Adventure",
                         Price=9.99M
                     },
                     new Games
                     {
-                        Title="Fallout New Vegas",
+                        
+                        Title ="Fallout New Vegas",
                         Genre="Action/Adventure",
                         Price=14.99M
                     },
                     new Games
                     {
-                        Title="Horizon,Zero,Dawn",
+                        
+                        Title ="Horizon,Zero,Dawn",
                         Genre="Action/Adventure",
                         Price=19.99M
                     },
                     new Games
                     {
+                        
                         Title = "Far Cry",
                         Genre = "Action/Adventure",
                         Price = 9.99M
                     },
                     new Games
                     {
+                        
                         Title = "Ark",
                         Genre = "Survival",
                         Price = 19.99M
                     },
                     new Games
                     {
+                        
                         Title = "No Man's Sky",
                         Genre = "Survival",
                         Price = 19.99M
                     },
                     new Games
                     {
+                        
                         Title = "Battlefield",
                         Genre = "First-Person shooter",
                         Price = 9.99M
                     },
                     new Games
                     {
+                        
                         Title = "Overwatch",
                         Genre = "First-Person shooter",
                         Price = 14.99M
                     },
                     new Games
                     {
+                        
                         Title = "Halo 5",
                         Genre = "First-Person shooter",
                         Price = 14.99M
                     },
                     new Games
                     {
+                        
                         Title = "Rainbow Six",
                         Genre = "First-Person shooter",
                         Price = 9.99M
                     },
                     new Games
                     {
+                        
                         Title = "Metal Gear Solid",
                         Genre = "Stealth",
                         Price = 19.99M

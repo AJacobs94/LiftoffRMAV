@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LiftoffRMAV.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200529021316_AddCheckbox")]
-    partial class AddCheckbox
+    [Migration("20200605022335_AddData")]
+    partial class AddData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,6 +40,23 @@ namespace LiftoffRMAV.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Games");
+                });
+
+            modelBuilder.Entity("LiftoffRMAV.Models.List", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("GamesID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("GamesID");
+
+                    b.ToTable("List");
                 });
 
             modelBuilder.Entity("LiftoffRMAV.Models.RmavRole", b =>
@@ -247,6 +264,15 @@ namespace LiftoffRMAV.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("LiftoffRMAV.Models.List", b =>
+                {
+                    b.HasOne("LiftoffRMAV.Models.Games", "Games")
+                        .WithMany()
+                        .HasForeignKey("GamesID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>

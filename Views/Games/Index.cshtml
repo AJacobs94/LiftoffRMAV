@@ -6,44 +6,54 @@
 
     }
 <h1>Games</h1>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Genre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                Add Games
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<form asp-controller="List" asp-action="Add" method="post">
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @item.Title
-                </td>
-                <td>
-                   @item.Genre
-                </td>
-                <td>
-                    @item.Price
-                </td>
-                <td>
-                    <input type="checkbox" id="games" name="games" />
-                    <label for="games">Add Game</label>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Genre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    Add Games
+                </th>
+                <th></th>
             </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.Title
+                    </td>
+                    <td>
+                        @item.Genre
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+
+                    <td>
+
+                        <input type="checkbox"  name="gameIds" id="@item.ID"  value="@item.ID" />
+                        <label for="@item.ID">Add Game</label>
 
 
-        }
-    </tbody>
-</table>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+  <input type="submit" value="Add Games" />
+</form>
+    
+        
+    

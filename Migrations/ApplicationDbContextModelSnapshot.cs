@@ -40,6 +40,23 @@ namespace LiftoffRMAV.Migrations
                     b.ToTable("Games");
                 });
 
+            modelBuilder.Entity("LiftoffRMAV.Models.List", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("GamesID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("GamesID");
+
+                    b.ToTable("List");
+                });
+
             modelBuilder.Entity("LiftoffRMAV.Models.RmavRole", b =>
                 {
                     b.Property<int>("Id")
@@ -245,6 +262,15 @@ namespace LiftoffRMAV.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("LiftoffRMAV.Models.List", b =>
+                {
+                    b.HasOne("LiftoffRMAV.Models.Games", "Games")
+                        .WithMany()
+                        .HasForeignKey("GamesID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>

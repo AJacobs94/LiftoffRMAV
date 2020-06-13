@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LiftoffRMAV.Migrations
 {
-    public partial class AddData : Migration
+    public partial class AddValidation : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -172,21 +172,28 @@ namespace LiftoffRMAV.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "List",
+                name: "Items",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    GamesID = table.Column<int>(nullable: false)
+                    GamesID = table.Column<int>(nullable: false),
+                    UserId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_List", x => x.ID);
+                    table.PrimaryKey("PK_Items", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_List_Games_GamesID",
+                        name: "FK_Items_Games_GamesID",
                         column: x => x.GamesID,
                         principalTable: "Games",
                         principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Items_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -230,9 +237,14 @@ namespace LiftoffRMAV.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_List_GamesID",
-                table: "List",
+                name: "IX_Items_GamesID",
+                table: "Items",
                 column: "GamesID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_UserId",
+                table: "Items",
+                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -253,16 +265,16 @@ namespace LiftoffRMAV.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "List");
+                name: "Items");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "Games");
 
             migrationBuilder.DropTable(
-                name: "Games");
+                name: "AspNetUsers");
         }
     }
 }

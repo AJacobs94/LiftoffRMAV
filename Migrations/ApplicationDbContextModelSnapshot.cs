@@ -40,7 +40,7 @@ namespace LiftoffRMAV.Migrations
                     b.ToTable("Games");
                 });
 
-            modelBuilder.Entity("LiftoffRMAV.Models.List", b =>
+            modelBuilder.Entity("LiftoffRMAV.Models.Items", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -50,11 +50,16 @@ namespace LiftoffRMAV.Migrations
                     b.Property<int>("GamesID")
                         .HasColumnType("int");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("ID");
 
                     b.HasIndex("GamesID");
 
-                    b.ToTable("List");
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Items");
                 });
 
             modelBuilder.Entity("LiftoffRMAV.Models.RmavRole", b =>
@@ -264,11 +269,17 @@ namespace LiftoffRMAV.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("LiftoffRMAV.Models.List", b =>
+            modelBuilder.Entity("LiftoffRMAV.Models.Items", b =>
                 {
                     b.HasOne("LiftoffRMAV.Models.Games", "Games")
                         .WithMany()
                         .HasForeignKey("GamesID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LiftoffRMAV.Models.RmavUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

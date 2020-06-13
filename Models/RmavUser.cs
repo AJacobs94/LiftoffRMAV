@@ -8,6 +8,7 @@ namespace LiftoffRMAV.Models
 {
     public class RmavUser : IdentityUser<int>
     {
+
         [PersonalData, Required, StringLength(20)]
         public string FirstName { get; set; }
 

@@ -6,11 +6,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LiftoffRMAV.Models
 {
-    public class List
+    public class Items
     {
         public int GamesID { get; set; }
         public int ID { get; set; }
         public Games Games { get; set; }
-       
+
+        public int UserId { get; set; }
+       public RmavUser User { get; set; }
     }
 }

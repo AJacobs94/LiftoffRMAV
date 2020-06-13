@@ -1,4 +1,4 @@
-﻿@model IEnumerable<LiftoffRMAV.Models.List>
+﻿@model IEnumerable<LiftoffRMAV.Models.Items>
 
 <h1>My Game List</h1>
 
@@ -9,12 +9,12 @@
         <th> @Html.DisplayNameFor(model => model.Games.Price)</th>
     </tr>*@
     
-        @foreach (var list in Model)
+        @foreach (var item in Model)
         {
     <tr>
-        <td>@list.Games.Title</td>
-        <td>@list.Games.Genre</td>
-        <td>@list.Games.Price</td>
+        <td>@item.Games.Title</td>
+        <td>@item.Games.Genre</td>
+        <td>@item.Games.Price</td>
     </tr>
         }
    

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using LiftoffRMAV.Data;
 using LiftoffRMAV.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,12 +15,15 @@ namespace LiftoffRMAV.Controllers
     public class GamesController : Controller
     {
         private readonly ApplicationDbContext _context;
-        public GamesController(ApplicationDbContext context)
+        private readonly UserManager<RmavUser> _userManager;
+        public GamesController(ApplicationDbContext context, UserManager<RmavUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
         public async Task<IActionResult> Index(string searchString)
         {
+            //collects search request based on game genre
             var searches = from s in _context.Games
                            select s;
             if (!String.IsNullOrEmpty(searchString))

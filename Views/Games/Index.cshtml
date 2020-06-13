@@ -6,7 +6,8 @@
 
     }
 <h1>Games</h1>
-<form asp-controller="List" asp-action="Add" method="post">
+
+<form asp-controller="Items" asp-action="Add" method="post">
     <table class="table">
         <thead>
             <tr>
@@ -39,14 +40,14 @@
                     <td>
                         @item.Price
                     </td>
-
+                    @if (User.Identity.IsAuthenticated)
+                    {
                     <td>
-
                         <input type="checkbox"  name="gameIds" id="@item.ID"  value="@item.ID" />
                         <label for="@item.ID">Add Game</label>
 
-
                     </td>
+                    }
                 </tr>
             }
 

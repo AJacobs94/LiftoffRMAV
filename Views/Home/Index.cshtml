@@ -1,18 +1,22 @@
 ﻿@model LiftoffRMAV.Models.Games
 
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <p>
 
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>
+
+    </p>
+    <h5>
+        RMAV stands for Recommend Me A Video-Game, please search for recommendtions by genre.
+        Search for Genres such as Action/Adventure, Stealth, Simulation, First-Person Shooter, and Survival.
+    </h5>
+    <form asp-controller="Games" asp-action="Index">
+        <p>
+            Search Game Genres:<input type="text" name="SearchString" />
+            <input type="submit" value="Search" />
         </p>
-        <h5>RMAV stands for Recommend Me A Video-Game, please search for recommendtions by genre.
-        Search for Genres such as Action/Adventure, Stealth, Simulation, First-Person Shooter, and Survival.</h5>
-        <form asp-controller="Games" asp-action="Index">
-            <p>
-                Search Game Genres:<input type="text" name="SearchString" />
-                <input type="submit" value="Search" />
-            </p>
-        </form>
-    </div>
+    </form>
+</div>
 
 

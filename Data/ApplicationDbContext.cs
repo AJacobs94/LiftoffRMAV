@@ -14,7 +14,8 @@ namespace LiftoffRMAV.Data
         {}
 
         public DbSet<Games> Games { get; set; }
-        public DbSet<List> List { get; set; }
+        public DbSet<Items> Items { get; set; }
+       
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

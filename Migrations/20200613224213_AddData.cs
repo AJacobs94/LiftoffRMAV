@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LiftoffRMAV.Migrations
 {
-    public partial class AddValidation : Migration
+    public partial class AddData : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

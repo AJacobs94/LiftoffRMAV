@@ -13,11 +13,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using LiftoffRMAV.Models;
+using NToastNotify;
 
 namespace LiftoffRMAV
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -36,7 +38,8 @@ namespace LiftoffRMAV
            .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
             services.AddControllersWithViews();
-            services.AddRazorPages(); 
+            services.AddRazorPages();
+            services.AddMvc().AddNToastNotifyToastr();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,7 +63,7 @@ namespace LiftoffRMAV
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseNToastNotify();
 
 
            app.UseEndpoints(endpoints =>

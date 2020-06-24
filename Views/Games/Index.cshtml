@@ -20,9 +20,12 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Price)
                 </th>
+                @if (User.Identity.IsAuthenticated)
+                {
                 <th>
                     Add Games
                 </th>
+                }
                 <th></th>
             </tr>
         </thead>
@@ -53,7 +56,10 @@
 
         </tbody>
     </table>
+    @if (User.Identity.IsAuthenticated)
+    {
   <input type="submit" value="Add Games" />
+    }
 </form>
     
         

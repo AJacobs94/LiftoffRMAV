@@ -8,12 +8,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - LiftoffRMAV</title>
-    <link rel="stylesheet" href="~/Shared/StyleSheet." />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body style="background-color: #A293A7">
+<body style="background-image: url(/images/videogame.jpg)">
     <style>
+        body{
+        background-image:url("/images/videogame.jpg")
+        }
         .navbar-custom {
             background-color:#473A4B
            }
@@ -23,18 +25,19 @@
                 color:#DAF7A6
             }
         .logo-image {
-            width: 46px;
-            height: 46px;
+            width:55px;
+            height: 55px;
             border-radius: 50%;
             overflow: hidden;
             margin-top: -6px;
+            background:transparent;
         }
     </style>
 
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-custom  box-shadow mb-3">
             <div class="logo-image">
-                <img src="Astronaut.jpg" />
+                <img src="/images/Astronaut.jpg" height="55"/>
             </div>
             <div class="container">
                 <ul class="nav navbar-nav">

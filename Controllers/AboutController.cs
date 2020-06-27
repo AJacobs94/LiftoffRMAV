@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LiftoffRMAV.Controllers
 {
-    public class PleaseController : Controller
+    public class AboutController : Controller
     {
         // Error Controller for all user errors pertaining to user
         public IActionResult Index()
@@ -16,14 +16,6 @@ namespace LiftoffRMAV.Controllers
             return View();
         }
 
-        public IActionResult Duplicate()
-        {
-            return View();
-        }
-
-        public IActionResult NotAuthorized()
-        {
-            return View();
-        }
+       
     }
 }

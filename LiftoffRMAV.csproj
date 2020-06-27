@@ -29,5 +29,16 @@
   <ItemGroup>
     <Folder Include="Images\" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="wwwroot\images\Astronaut.jpg" />
+    <None Include="wwwroot\images\Astronaut.png" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Update="wwwroot\images\Astronaut.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
 </Project>

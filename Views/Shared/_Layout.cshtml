@@ -13,35 +13,49 @@
 </head>
 <body style="background-image: url(/images/videogame.jpg)">
     <style>
+      table{
+          border:none;
+          background-color:rgba(7, 5, 5, 0.59)
+          
+      }
+        h3,h4,h1,h2,h5,li,p,td,th{
+            color:lightgray
+            
+
+        }
+
         body{
-        background-image:url("/images/videogame.jpg")
+        background-image:url("/images/videogame.jpg");
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
         }
         .navbar-custom {
-            background-color:#473A4B
-           }
+            background-color: black
+        }
 
             .navbar-custom .navbar-brand,
             .navbar-custom .navbar-text {
-                color:#DAF7A6
+                color:#0B5B13
             }
         .logo-image {
-            width:55px;
+            width: 55px;
             height: 55px;
             border-radius: 50%;
             overflow: hidden;
             margin-top: -6px;
-            background:transparent;
+            background: transparent;
         }
     </style>
 
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-custom  box-shadow mb-3">
-            <div class="logo-image">
+            <div >
                 <img src="/images/Astronaut.jpg" height="55"/>
             </div>
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li> <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="font-family:'OCR-A II',monospace">RMAV</a></li>
+                    <li> <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="font-family: 'OCR-A II',monospace">RMAV</a></li>
                     <li><a class="navbar-brand" asp-controller="Items" asp-action="Index" style="font-family:'OCR-A II',monospace">My List</a></li>
                 </ul>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -52,11 +66,9 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="navbar-brand" asp-area="" asp-controller="About" asp-action="Index" style="font-family:'OCR-A II',monospace">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                       
                     </ul>
                 </div>
             </div>

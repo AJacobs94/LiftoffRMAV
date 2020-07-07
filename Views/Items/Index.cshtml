@@ -3,18 +3,20 @@
 <h1>My Game List</h1>
 
 <table class="table">
-    @*<tr>
-        <th> @Html.DisplayNameFor(model => model.Games.Title)</th>
-        <th> @Html.DisplayNameFor(model => model.Games.Genre)</th>
-        <th> @Html.DisplayNameFor(model => model.Games.Price)</th>
-    </tr>*@
+    <thead>
+    <tr>
+        <th style="border-top:none"> @Html.DisplayNameFor(model => model.Games.Title)</th>
+        <th style="border-top:none"> @Html.DisplayNameFor(model => model.Games.Genre)</th>
+        <th style="border-top:none"> @Html.DisplayNameFor(model => model.Games.Price)</th>
+    </tr>
+    </thead>
     
         @foreach (var item in Model)
         {
     <tr>
-        <td>@item.Games.Title</td>
-        <td>@item.Games.Genre</td>
-        <td>@item.Games.Price</td>
+        <td style="border:none">@item.Games.Title</td>
+        <td style="border:none">@item.Games.Genre</td>
+        <td style="border:none">@item.Games.Price</td>
     </tr>
         }
    

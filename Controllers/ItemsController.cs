@@ -54,12 +54,9 @@ namespace LiftoffRMAV.Controllers
             //Authenticates user to make a personal list
             if (ModelState.IsValid)
             {
-               
-               // if (User.Identity.IsAuthenticated)
-               // {
                     foreach (int gameId in gameIds)
                     {
-
+                    
                         Games theGames = _context.Games.Single(g => g.ID == gameId);
                         Items newList = new Items
                         {
@@ -67,7 +64,7 @@ namespace LiftoffRMAV.Controllers
                             
                         };
                        newList.UserId = (int.Parse(_userManager.GetUserId(User)));
-                        //If there is already a game with the same ID, will redirect to an error page.
+                        //If there is already a game with the same ID, will redirect to landing page with pop-up error
                         if (_context.Items.Any(c => c.GamesID.Equals(theGames.ID) && c.UserId == user.Id))
                         {
                             _toastNotification.AddErrorToastMessage("You Have Already Added This Game!");
@@ -80,20 +77,17 @@ namespace LiftoffRMAV.Controllers
                             _context.SaveChanges();
                        }
                     }
-               // }
-               // else
-               //{
-                //   return Redirect("");
-              // }
+              
                 
             }
             return Redirect("/Items/Index");
 
         }
-       // private bool SearchExists(int id)
-        //{
-        //    return _context.Items.Any(e => e.ID == id);
-       // }
+
+      
+
+
+       
     }
    
 

@@ -11,22 +11,22 @@
     <table class="table">
         <thead>
             <tr>
-                <th>
+                <th style="border-top:none" >
                     @Html.DisplayNameFor(model => model.Title)
                 </th>
-                <th>
+                <th style="border-top:none">
                     @Html.DisplayNameFor(model => model.Genre)
                 </th>
-                <th>
+                <th style="border-top:none">
                     @Html.DisplayNameFor(model => model.Price)
                 </th>
                 @if (User.Identity.IsAuthenticated)
                 {
-                <th>
+                <th style="border-top:none">
                     Add Games
                 </th>
                 }
-                <th></th>
+                
             </tr>
         </thead>
 
@@ -34,18 +34,18 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>
+                    <td style="border:none">
                         @item.Title
                     </td>
-                    <td>
+                    <td style="border:none">
                         @item.Genre
                     </td>
-                    <td>
+                    <td style="border:none">
                         @item.Price
                     </td>
                     @if (User.Identity.IsAuthenticated)
                     {
-                    <td>
+                    <td style="border:none">
                         <input type="checkbox"  name="gameIds" id="@item.ID"  value="@item.ID" />
                         <label for="@item.ID">Add Game</label>
 
